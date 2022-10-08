@@ -78,6 +78,20 @@ body {
           border: 1px solid #868686;
 
           margin-bottom: 27px;
+
+          transition: 0.4s ease-in-out;
+        }
+
+        .label-input-email:hover {
+          border: 1px solid #ffc632;
+
+          transition: 0.4s ease-in-out;
+        }
+
+        .label-input-password:hover {
+          border: 1px solid #ffc632;
+
+          transition: 0.4s ease-in-out;
         }
 
         input {
@@ -103,12 +117,16 @@ body {
           border: none;
         }
 
+        .btnbtn {
+          padding-left: 95px;
+        }
+
         .btn {
           background-color: transparent;
           outline: none;
           border: none;
 
-          padding-left: 95px;
+          //padding-left: 95px;
         }
       }
 
@@ -175,6 +193,14 @@ body {
           font-weight: 600;
           font-size: 14px;
           line-height: 21px;
+
+          transition: 0.4s ease-in-out;
+
+          &:hover {
+            filter: brightness(0.6);
+
+            transition: 0.4s ease-in-out;
+          }
         }
       }
 
@@ -197,6 +223,14 @@ body {
         border-radius: 4px;
 
         margin-bottom: 20px;
+
+        transition: 0.4s ease-in-out;
+      }
+
+      .send-btn:hover {
+        filter: brightness(0.6);
+
+        transition: 0.4s ease-in-out;
       }
 
       .footer {
@@ -215,6 +249,14 @@ body {
           font-weight: 600;
           font-size: 14px;
           line-height: 21px;
+
+          transition: 0.4s ease-in-out;
+
+          &:hover {
+            filter: brightness(0.6);
+
+            transition: 0.4s ease-in-out;
+          }
         }
       }
     }

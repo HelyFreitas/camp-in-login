@@ -23,10 +23,10 @@ export const Signin = () => {
             </section>
             <p>Entre com suas informações de cadastro</p>
           </header>
-          <form method="POST">
+          <form method="POST" autoComplete="off">
             <p>E-mail:</p>
-            <label htmlFor="email" className="label-input-email">
-              <Envelope size={20} color="#868686" />
+            <label id="label" htmlFor="email" className="label-input-email">
+              <Envelope className="envelope" size={20} color="#868686" />
               <input
                 id="email"
                 className="email-input"
@@ -36,18 +36,20 @@ export const Signin = () => {
             </label>
             <p>Senha:</p>
             <label htmlFor="pass" className="label-input-password">
-              <LockSimple size={20} color="#868686" />
+              <LockSimple className="locksimple" size={20} color="#868686" />
               <input
                 className="pass-input"
                 type={state ? "text" : "password"}
                 id="pass"
                 placeholder="Digite sua senha"
               />
-              <button type="button" className="btn" onClick={toggleBtn}>
-                {state
-                  ? <Eye size={20} color="#AFB6C2" className="icon" />
-                  : <EyeSlash size={20} color="#AFB6C2" className="icon2" />}
-              </button>
+              <div className="btnbtn">
+                <button type="button" className="btn" onClick={toggleBtn}>
+                  {state
+                    ? <Eye size={20} color="#AFB6C2" className="icon" />
+                    : <EyeSlash size={20} color="#AFB6C2" className="icon2" />}
+                </button>
+              </div>
             </label>
           </form>
           <div className="forgotPassword">
