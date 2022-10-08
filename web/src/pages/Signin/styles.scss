@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  .content,
+  .backimage {
+    width: 50%;
+    height: 100vh;
+
+    background-color: #191816;
+
+    img {
+      margin-top: 2rem;
+      margin-left: 2rem;
+    }
+
+    .content-container {
+      width: 572px;
+      height: 560px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      position: absolute;
+      top: 300px;
+      left: 185px;
+
+      border-radius: 4px;
+
+      background-color: #24221f;
+
+      //Header
+      .title {
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 27px;
+
+        .header-title {
+          display: flex;
+          align-items: center;
+
+          h1 {
+            color: #d4ccb6;
+
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 36px;
+          }
+        }
+
+        p {
+          color: #afb6c2;
+
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      form {
+        .label-input-email,
+        .label-input-password {
+          height: 50px;
+          width: 335px;
+
+          padding-left: 5px;
+
+          display: flex;
+          align-items: center;
+
+          border: 1px solid #868686;
+
+          margin-bottom: 27px;
+        }
+
+        input {
+          color: #868686;
+          font-size: 14px;
+
+          margin-left: 5px;
+        }
+
+        p {
+          color: #afb6c2;
+
+          margin-bottom: 10px;
+
+          font-size: 16px;
+          font-weight: 500;
+        }
+
+        .email-input,
+        .pass-input {
+          background-color: transparent;
+          outline: none;
+          border: none;
+        }
+
+        .btn {
+          background-color: transparent;
+          outline: none;
+          border: none;
+
+          padding-left: 95px;
+        }
+      }
+
+      .forgotPassword {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-bottom: 20px;
+
+        a {
+          color: #ffc632;
+          font-size: 14px;
+
+          padding-left: 70px;
+        }
+
+        .remember-me {
+          display: flex;
+          align-items: center;
+
+          #check {
+            display: none;
+          }
+
+          .checkbox-label {
+            display: flex;
+            align-items: center;
+
+            cursor: pointer;
+          }
+
+          .checkbox-label::before {
+            content: "";
+            display: block;
+            height: 1.2rem;
+            width: 1.2rem;
+            box-sizing: border-box;
+            border-radius: 4px;
+            border: 1px solid #868686;
+            transition: 0.1s ease-in-out;
+          }
+
+          #check:checked + .checkbox-label::before {
+            background-color: #ffc632;
+            border: 2px solid #ffc632;
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd'%3E%3Cpath d='M21 6.285l-11.16 12.733-6.84-6.018 1.319-1.49 5.341 4.686 9.865-11.196 1.475 1.285z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center center;
+          }
+          p {
+            margin-left: 5px;
+
+            color: #868686;
+
+            font-size: 15px;
+          }
+        }
+
+        a {
+          color: #ffc632;
+
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 21px;
+        }
+      }
+
+      .send-btn {
+        width: 334px;
+        height: 51px;
+
+        background-color: #ffc632;
+        color: #473404;
+
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+
+        letter-spacing: 0.015em;
+        text-transform: uppercase;
+
+        border: none;
+        border-radius: 4px;
+
+        margin-bottom: 20px;
+      }
+
+      .footer {
+        display: flex;
+
+        p {
+          color: #ffc632;
+        }
+
+        a {
+          margin-left: 3px;
+
+          color: #ffc632;
+
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+  .backimage {
+    background-image: url("../../assets//side-image.jpg");
+    background-size: cover;
+  }
+}
