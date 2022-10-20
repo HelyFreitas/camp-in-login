@@ -7,7 +7,7 @@ export const Signin = () => {
   const [state, setstate] = useState(false);
 
   const toggleBtn = () => {
-    setstate(prevState => !prevState);
+    setstate((prevState) => !prevState);
   };
 
   return (
@@ -24,18 +24,25 @@ export const Signin = () => {
             <p>Entre com suas informações de cadastro</p>
           </header>
           <form method="POST" autoComplete="off">
-            <p>E-mail:</p>
-            <label id="label" htmlFor="email" className="label-input-email">
-              <Envelope className="envelope" size={20} color="#868686" />
-              <input
-                id="email"
-                className="email-input"
-                type="email"
-                placeholder="Digite seu e-mail"
-              />
+            <section className="input-email">
+              <label id="label" htmlFor="email" className="label-input-email">
+                E-mail:
+              </label>
+              <div className="inputs-icon-email">
+                <Envelope className="envelope" size={20} color="#868686" />
+                <input
+                  id="email"
+                  className="email-input"
+                  type="email"
+                  placeholder="Digite seu e-mail"
+                />
+              </div>
+            </section>
+            <section className="input-pass" >
+            <label htmlFor="pass" className="label-input-pass">
+              Senha:
             </label>
-            <p>Senha:</p>
-            <label htmlFor="pass" className="label-input-password">
+            <div className="inputs-icon-pass">
               <LockSimple className="locksimple" size={20} color="#868686" />
               <input
                 className="pass-input"
@@ -45,12 +52,15 @@ export const Signin = () => {
               />
               <div className="btnbtn">
                 <button type="button" className="btn" onClick={toggleBtn}>
-                  {state
-                    ? <Eye size={20} color="#AFB6C2" className="icon" />
-                    : <EyeSlash size={20} color="#AFB6C2" className="icon2" />}
+                  {state ? (
+                    <Eye size={20} color="#AFB6C2" className="icon" />
+                  ) : (
+                    <EyeSlash size={20} color="#AFB6C2" className="icon2" />
+                  )}
                 </button>
               </div>
-            </label>
+            </div>
+            </section>
           </form>
           <div className="forgotPassword">
             <div className="remember-me">

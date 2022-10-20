@@ -5,6 +5,11 @@ body {
 .container {
   display: flex;
   width: 100%;
+  img {
+    position: absolute;
+    top: 11px;
+    left: 12px;
+  }
   .content,
   .backimage {
     width: 50%;
@@ -12,23 +17,19 @@ body {
 
     background-color: #191816;
 
-    img {
-      margin-top: 2rem;
-      margin-left: 2rem;
-    }
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 
     .content-container {
-      width: 572px;
-      height: 560px;
+      width: 450px;
+      height: 464px;
 
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
-
-      position: absolute;
-      top: 300px;
-      left: 185px;
 
       border-radius: 4px;
 
@@ -53,52 +54,56 @@ body {
             line-height: 36px;
           }
         }
-
-        p {
+        p{
           color: #afb6c2;
-
-          font-style: normal;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 24px;
         }
       }
 
       form {
-        .label-input-email,
-        .label-input-password {
-          height: 50px;
-          width: 335px;
-
-          padding-left: 5px;
-
+        .input-email, .input-pass{
           display: flex;
-          align-items: center;
-
-          border: 1px solid #868686;
-
-          margin-bottom: 27px;
-
-          transition: 0.4s ease-in-out;
+          flex-direction: column;
         }
 
-        .label-input-email:hover {
-          border: 1px solid #ffc632;
-
-          transition: 0.4s ease-in-out;
-        }
-
-        .label-input-password:hover {
-          border: 1px solid #ffc632;
-
-          transition: 0.4s ease-in-out;
+        .inputs-icon-email, .inputs-icon-pass{
+          position: relative;
         }
 
         input {
+          width: 334px;
+
+          padding: 10px;
+          padding-left: 25px;
+
+          margin-bottom: 20px;
+
+          background-color: transparent;
+
+          outline: none;
+          border: 1px solid #868686;
+          border-radius: 4px;
+
           color: #868686;
           font-size: 14px;
 
-          margin-left: 5px;
+          transition: .4s ease-in-out;
+
+          &:hover {
+            border: 1px solid #ffc632;
+          }
+        }
+
+        .envelope,
+        .locksimple {
+          position: absolute;
+          top: 9px;
+          padding-left: 4px;
+        }
+
+        .label-input-email, .label-input-pass{
+          color: #afb6c2;
+
+          margin-bottom: 10px;
         }
 
         p {
@@ -110,15 +115,10 @@ body {
           font-weight: 500;
         }
 
-        .email-input,
-        .pass-input {
-          background-color: transparent;
-          outline: none;
-          border: none;
-        }
-
         .btnbtn {
-          padding-left: 95px;
+          position: absolute;
+          top: 9px;
+          left: 300px;
         }
 
         .btn {
