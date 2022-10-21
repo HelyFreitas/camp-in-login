@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "./styles.scss";
 import logo from "../../assets/logo.png";
 import { EyeSlash, Eye, SignIn, Envelope, LockSimple } from "phosphor-react";
@@ -76,7 +78,7 @@ export const Signin = () => {
           </button>
           <footer className="footer">
             <p>Não tem um conta?</p>
-            <a href="">Registre-se</a>
+            <Link to="/signup">Registre-se</Link>
           </footer>
         </div>
         {/*/////////////////////////////////////////////////////////////////////////////////////////////////*/}

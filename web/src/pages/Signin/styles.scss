@@ -15,12 +15,16 @@ body {
     width: 50%;
     height: 100vh;
 
-    background-color: #191816;
+    background-color: red;
 
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+
+  //   @media screen and (max-width: 1440px) {
+  //     background-color: blue;
+  // }
 
     .content-container {
       width: 450px;
@@ -33,7 +37,9 @@ body {
 
       border-radius: 4px;
 
-      background-color: #24221f;
+      // background-color: #24221f;
+
+   
 
       //Header
       .title {
@@ -54,18 +60,20 @@ body {
             line-height: 36px;
           }
         }
-        p{
+        p {
           color: #afb6c2;
         }
       }
 
       form {
-        .input-email, .input-pass{
+        .input-email,
+        .input-pass {
           display: flex;
           flex-direction: column;
         }
 
-        .inputs-icon-email, .inputs-icon-pass{
+        .inputs-icon-email,
+        .inputs-icon-pass {
           position: relative;
         }
 
@@ -86,7 +94,7 @@ body {
           color: #868686;
           font-size: 14px;
 
-          transition: .4s ease-in-out;
+          transition: 0.4s ease-in-out;
 
           &:hover {
             border: 1px solid #ffc632;
@@ -100,7 +108,8 @@ body {
           padding-left: 4px;
         }
 
-        .label-input-email, .label-input-pass{
+        .label-input-email,
+        .label-input-pass {
           color: #afb6c2;
 
           margin-bottom: 10px;

@@ -1,9 +1,13 @@
 import { Signin } from "./pages/Signin/index";
+import { Signup } from "./pages/Signup";
+import { Rotas } from "./Routes"
 
 function App() {
   return (
     <div className="App">
-      <Signin />
+      {/* <Signin /> */}
+      {/* <Signup /> */}
+      <Rotas />
     </div>
   );
 }
