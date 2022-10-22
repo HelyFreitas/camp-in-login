@@ -6,13 +6,7 @@ export const Header = styled.div`
   height: auto;
   width: 100%;
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  /* z-index: 1; */
-
-  margin-bottom: 10rem;
-  padding: 10px;
+  padding: 20px;
 
   background-color: #24221f;
   display: flex;
@@ -25,9 +19,12 @@ export const Header = styled.div`
     height: 40px;
 
     border-radius: 50%;
+    border: 4px solid #ffc632;
   }
 `;
 
-export const Main = styled.div``;
+export const Main = styled.div`
+  background-color: #525252;
+`;
 
 export const Footer = styled.div``;

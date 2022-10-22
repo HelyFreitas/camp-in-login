@@ -8,7 +8,7 @@ body {
   img {
     position: absolute;
     top: 11px;
-    left: 12px;
+    right: 12px;
   }
 
   .backimage {
@@ -31,7 +31,7 @@ body {
     width: 50%;
     height: 100vh;
 
-    background-color: #24221f;
+    background-color: #191816;
 
     display: flex;
     align-items: center;
@@ -71,6 +71,7 @@ body {
     //Header
     .title {
       display: flex;
+      align-items: center;
       flex-direction: column;
 
       margin-bottom: 27px;
@@ -216,6 +217,10 @@ body {
           border-radius: 4px;
           border: 1px solid #868686;
           transition: 0.1s ease-in-out;
+
+          @media screen and (max-width: 488px) {
+            width: 1rem;
+          }
         }
 
         #check:checked + .checkbox-label::before {
@@ -270,7 +275,8 @@ body {
       border: none;
       border-radius: 4px;
 
-      margin-bottom: 20px;
+      margin-top: 10px;
+      margin-bottom: 15px;
 
       transition: 0.4s ease-in-out;
 
