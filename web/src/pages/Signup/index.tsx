@@ -20,7 +20,7 @@ export const Signup = () => {
     <div className="container">
       <div className="backimage" />
       <div className="content">
-        <img className="img" src={Logo} alt="" />
+        <img className="img2" src={Logo} alt="" />
         {/*/////////////////////////////////////////////////////////////////////////////////////////////////*/}
         <div className="content-container">
           <header className="title">

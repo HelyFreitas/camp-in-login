@@ -15,7 +15,7 @@ export const Signin = () => {
   return (
     <div className="container">
       <div className="content">
-        <img src={logo} alt="" />
+        <img className="img1" src={logo} alt="" />
         {/*/////////////////////////////////////////////////////////////////////////////////////////////////*/}
         <div className="content-container">
           <header className="title">
@@ -40,28 +40,28 @@ export const Signin = () => {
                 />
               </div>
             </section>
-            <section className="input-pass" >
-            <label htmlFor="pass" className="label-input-pass">
-              Senha:
-            </label>
-            <div className="inputs-icon-pass">
-              <LockSimple className="locksimple" size={20} color="#868686" />
-              <input
-                className="pass-input"
-                type={state ? "text" : "password"}
-                id="pass"
-                placeholder="Digite sua senha"
-              />
-              <div className="btnbtn">
-                <button type="button" className="btn" onClick={toggleBtn}>
-                  {state ? (
-                    <Eye size={20} color="#AFB6C2" className="icon" />
-                  ) : (
-                    <EyeSlash size={20} color="#AFB6C2" className="icon2" />
-                  )}
-                </button>
+            <section className="input-pass">
+              <label htmlFor="pass" className="label-input-pass">
+                Senha:
+              </label>
+              <div className="inputs-icon-pass">
+                <LockSimple className="locksimple" size={20} color="#868686" />
+                <input
+                  className="pass-input"
+                  type={state ? "text" : "password"}
+                  id="pass"
+                  placeholder="Digite sua senha"
+                />
+                <div className="btnbtn">
+                  <button type="button" className="btn" onClick={toggleBtn}>
+                    {state ? (
+                      <Eye size={20} color="#AFB6C2" className="icon" />
+                    ) : (
+                      <EyeSlash size={20} color="#AFB6C2" className="icon2" />
+                    )}
+                  </button>
+                </div>
               </div>
-            </div>
             </section>
           </form>
           <div className="forgotPassword">
@@ -71,7 +71,7 @@ export const Signin = () => {
                 <p>Lembre-me</p>
               </label>
             </div>
-            <a href="">Esqueci minha senha</a>
+            <Link to="/forgotpass">Esqueci minha senha</Link>
           </div>
           <button type="submit" className="send-btn">
             ENTRAR
