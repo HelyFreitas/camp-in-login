@@ -5,7 +5,7 @@ body {
 .container {
   display: flex;
   width: 100%;
-  
+
   .img1 {
     position: absolute;
     top: 11px;
@@ -310,6 +310,11 @@ body {
         }
       }
     }
+  }
+
+  .home {
+    font-size: small;
+    color: #24221f;
   }
 }
 .backimage {

@@ -1,6 +1,6 @@
 .card {
     height: 100%;
-    width: 50%;
+    width: 100%;
   
     background: #735bf2;
     color: #fff;
@@ -16,4 +16,10 @@
   
   .card strong {
     font-size: 18px;
+  }
+
+  button{
+    background-color: transparent;
+    border: none;
+    outline: none;
   }

@@ -80,6 +80,7 @@ export const Signin = () => {
             <p>Não tem um conta?</p>
             <Link to="/signup">Registre-se</Link>
           </footer>
+          <Link className="home" to="/home">Home</Link>
         </div>
         {/*/////////////////////////////////////////////////////////////////////////////////////////////////*/}
       </div>

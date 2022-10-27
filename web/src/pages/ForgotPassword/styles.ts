@@ -33,7 +33,7 @@ export const Content = styled.div`
 
     &:hover {
       filter: brightness(0.6);
-      transition: 0.4s ease-in-out;
+      transition: 0.8s ease-in-out;
     }
   }
 
@@ -97,8 +97,11 @@ export const Content = styled.div`
     color: #94a3b8;
     font-size: 14px;
 
+    transition: .4s ease-in-out;
+
     &:focus {
       border: 1px solid #ffc632;
+      transition: .4s ease-in-out;
     }
 
     @media screen and (max-width: 488px) {
@@ -111,6 +114,12 @@ export const Content = styled.div`
     position: absolute;
     top: 9px;
     padding-left: 4px;
+  }
+
+  .envelope polyline, path{
+    &:hover{
+      stroke: red;
+    }
   }
 
   .label-input-email,
