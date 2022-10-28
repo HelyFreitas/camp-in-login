@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: #363431;
@@ -7,8 +7,18 @@ export const Container = styled.div`
   top: 0px;
   left: 0px;
   width: 280px;
-  left: ${props => props.sidebar ? '0' : '-100%'};
-  animation: showSidebar .4s;
+  left: ${(props) => (props.sidebar ? "0" : "-100%")};
+  animation: showSidebar 0.4s;
+
+  .button-sidebar {
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      transform: rotate(180deg);
+      transition: 0.2s ease-in-out;
+    }
+  }
+
   > svg {
     position: fixed;
     color: white;

@@ -76,7 +76,7 @@ export function Home() {
         <img className="home-perfil" src={Perfil} alt="" />
       </header>
       <div className="todo-nav">
-        <FaBars size={25} onClick={showSidebar} />
+        <FaBars className="button-open-side" size={25} onClick={showSidebar} />
         {sidebar && <Sidebar active={setSidebar} />}
         <p className="todo-tasks-adicionadas">
           Tarefas adicionadas: {students.length}

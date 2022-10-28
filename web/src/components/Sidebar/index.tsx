@@ -21,7 +21,7 @@ export const Sidebar = ({ active }) => {
 
   return (
     <C.Container sidebar={active}>
-      <FaTimes onClick={closeSidebar} />
+      <FaTimes className="button-sidebar" onClick={closeSidebar} />
       <C.Content>
         <SidebarItem Icon={FaHome} Text="Home" />
         <SidebarItem Icon={FaChartBar} Text="Statistics" />
