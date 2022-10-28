@@ -24,7 +24,7 @@ export function Home() {
     if (!studentName.trim()) {
       toast.error("Adicione alguma task", {
         theme: "colored",
-        autoClose: 2000,
+        autoClose: 2000
       });
       return;
     }
@@ -34,22 +34,22 @@ export function Home() {
       name: studentName,
       time: new Date().toLocaleTimeString("pt-BR", {
         hour: "2-digit",
-        minute: "2-digit",
+        minute: "2-digit"
         // second: "2-digit",
-      }),
+      })
     };
 
-    setStudents((prevState) => [...prevState, newStudent]);
+    setStudents(prevState => [...prevState, newStudent]);
 
     setStudentName("");
     toast.success("Tarefa adicionada com sucesso", {
       theme: "colored",
-      autoClose: 2000,
+      autoClose: 2000
     });
   }
 
   const deleteTodo = (id: string) => {
-    const filteredStudents = students.filter((student) => student.id !== id);
+    const filteredStudents = students.filter(student => student.id !== id);
     setStudents(filteredStudents);
   };
 
@@ -60,13 +60,18 @@ export function Home() {
         <img className="home-logo" src={Logo} alt="" />
         <img className="home-perfil" src={Perfil} alt="" />
       </header>
+      <div className="todo-nav">
+        <p className="todo-tasks-adicionadas">Tarefas adicionadas: 0</p>
+        <p className="todo-tasks-concluidas">Tarefas concluídas: 0</p>
+      </div>
+      {/*/////////////////////////////////////////////////////////////////////////*/}
       <main className="todo-main">
         <h1 className="todo-title2">Adicione sua tarefa</h1>
         <input
           className="todo-input"
           type="text"
           placeholder="Digite o nome da terefa"
-          onChange={(e) => setStudentName(e.target.value)}
+          onChange={e => setStudentName(e.target.value)}
           value={studentName}
         />
         <button className="todo-btn" type="button" onClick={handleAddStudent}>
@@ -74,7 +79,7 @@ export function Home() {
         </button>
         <ToastContainer />
 
-        {students.map((student) => (
+        {students.map(student =>
           <TodoItem
             deleteTodo={deleteTodo}
             key={student.id}
@@ -82,9 +87,12 @@ export function Home() {
             name={student.name}
             time={student.time}
           />
-        ))}
+        )}
       </main>
-      <Link className="home-exit" to="/">sair</Link>
+      {/*/////////////////////////////////////////////////////////////////////////*/}
+      <Link className="home-exit" to="/">
+        sair
+      </Link>
     </div>
   );
 }

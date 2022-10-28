@@ -11,11 +11,17 @@ export type TodoItemProps = {
 export function TodoItem({ id, name, time, deleteTodo }: TodoItemProps) {
   return (
     <div className="card">
-      <strong>{name}</strong>
-      <small>{time}</small>
-      
-      <button onClick={() => deleteTodo(id)}>
-        <Trash size={30} color="#ffffff" />
+      <section className="todo-section">
+        <strong className="todo-strong">
+          {name}
+        </strong>
+        <small className="todo-small">
+          Adicionado ás: {time}
+        </small>
+      </section>
+
+      <button className="todo-button-delete" onClick={() => deleteTodo(id)}>
+        <Trash className="todo-icon-delete" size={30} color="#ffffff" />
       </button>
     </div>
   );

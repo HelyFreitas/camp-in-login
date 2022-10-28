@@ -1,25 +1,45 @@
 .card {
-    height: 100%;
-    width: 100%;
-  
-    background: #735bf2;
-    color: #fff;
-  
-    border-radius: 10px;
-    margin-bottom: 20px;
-  
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 24px;
-  }
-  
-  .card strong {
-    font-size: 18px;
-  }
+  height: 100%;
+  width: 100%;
 
-  button{
-    background-color: transparent;
-    border: none;
-    outline: none;
-  }
+  background: #735bf2;
+  color: #fff;
+
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.card .todo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card .todo-strong {
+  font-size: 18px;
+
+  padding-bottom: 10px;
+}
+
+.card .todo-small {
+  font-size: 10px;
+}
+
+.todo-button-delete {
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.todo-button-delete:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.3);
+}
