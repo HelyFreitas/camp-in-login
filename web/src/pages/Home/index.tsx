@@ -10,6 +10,10 @@ import Perfil from "../../assets/perfil.jpg";
 import { TodoItem } from "../../components/TodoItem";
 import { Link } from "react-router-dom";
 
+import { FaBars } from "react-icons/fa";
+
+import { Sidebar } from "../../components/Sidebar";
+
 type Student = {
   id: string;
   name: string;
@@ -17,6 +21,7 @@ type Student = {
 };
 
 export function Home() {
+  // State do Students
   const [studentName, setStudentName] = useState("");
   const [students, setStudents] = useState<Student[]>([]);
 
@@ -24,7 +29,7 @@ export function Home() {
     if (!studentName.trim()) {
       toast.error("Adicione alguma task", {
         theme: "colored",
-        autoClose: 2000
+        autoClose: 2000,
       });
       return;
     }
@@ -34,44 +39,57 @@ export function Home() {
       name: studentName,
       time: new Date().toLocaleTimeString("pt-BR", {
         hour: "2-digit",
-        minute: "2-digit"
-        // second: "2-digit",
-      })
+        minute: "2-digit",
+      }),
     };
 
-    setStudents(prevState => [...prevState, newStudent]);
+    setStudents((prevState) => [...prevState, newStudent]);
 
     setStudentName("");
     toast.success("Tarefa adicionada com sucesso", {
       theme: "colored",
-      autoClose: 2000
+      autoClose: 1500,
     });
   }
 
   const deleteTodo = (id: string) => {
-    const filteredStudents = students.filter(student => student.id !== id);
+    const filteredStudents = students.filter((student) => student.id !== id);
     setStudents(filteredStudents);
   };
+
+  // const editTodo = (id: string, editedText: string) => {
+  //   const filterTodo = students.map((todo) => {
+  //     return todo.id === id ? { ...todo, content: editedText } : todo;
+  //   });
+  //   setStudents(filterTodo);
+  // };
+
+  // SideBar
+  const [sidebar, setSidebar] = useState<boolean>(false);
+
+  const showSidebar = () => setSidebar(!sidebar);
 
   return (
     <div className="container-todo">
       <header className="todo-header">
-        {/* <h1 className="todo-title">Lista de Presença</h1> */}
         <img className="home-logo" src={Logo} alt="" />
         <img className="home-perfil" src={Perfil} alt="" />
       </header>
       <div className="todo-nav">
-        <p className="todo-tasks-adicionadas">Tarefas adicionadas: 0</p>
-        <p className="todo-tasks-concluidas">Tarefas concluídas: 0</p>
+        <FaBars size={25} onClick={showSidebar} />
+        {sidebar && <Sidebar active={setSidebar} />}
+        <p className="todo-tasks-adicionadas">
+          Tarefas adicionadas: {students.length}
+        </p>
+        <p className="todo-tasks-concluidas">Tarefas concluídas:</p>
       </div>
-      {/*/////////////////////////////////////////////////////////////////////////*/}
       <main className="todo-main">
         <h1 className="todo-title2">Adicione sua tarefa</h1>
         <input
           className="todo-input"
           type="text"
           placeholder="Digite o nome da terefa"
-          onChange={e => setStudentName(e.target.value)}
+          onChange={(e) => setStudentName(e.target.value)}
           value={studentName}
         />
         <button className="todo-btn" type="button" onClick={handleAddStudent}>
@@ -79,51 +97,19 @@ export function Home() {
         </button>
         <ToastContainer />
 
-        {students.map(student =>
+        {students.map((student) => (
           <TodoItem
             deleteTodo={deleteTodo}
             key={student.id}
             id={student.id}
             name={student.name}
-            time={student.time}
+            // editTodo={editTodo}
           />
-        )}
+        ))}
       </main>
-      {/*/////////////////////////////////////////////////////////////////////////*/}
       <Link className="home-exit" to="/">
         sair
       </Link>
     </div>
   );
 }
-
-// import { useState } from "react";
-// import { TodoItem, TodoProps } from "../../components/TodoItem";
-
-// import "./home-styles.css";
-
-// export const Home = () => {
-//   const [task, setTask] = useState("");
-//   // const [todoList, setTodoList] = useState([]);
-
-//   function addTask() {}
-
-//   return (
-//     <div className="home-container">
-//       <h1 className="home-title">Criar tarefas</h1>
-
-//       <input
-//         type="text"
-//         placeholder="Digite uma tarefa"
-//         className="home-input"
-//         value={task}
-//         onChange={(event) => setTask(event.target.value)}
-//       />
-
-//       <button type="submit" className="home-button" onClick={addTask}>
-//         Adicionar
-//       </button>
-
-//     </div>
-//   );
-// };

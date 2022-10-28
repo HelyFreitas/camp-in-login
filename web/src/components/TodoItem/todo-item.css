@@ -16,14 +16,16 @@
 
 .card .todo-section {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
 }
 
 .card .todo-strong {
   font-size: 18px;
+}
 
-  padding-bottom: 10px;
+.buttons-todo {
+  display: flex;
 }
 
 .card .todo-small {
@@ -40,6 +42,22 @@
 }
 
 .todo-button-delete:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.3);
+}
+
+.todo-button-edit {
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  transition: all 0.5s;
+  cursor: pointer;
+
+  padding-right: 10px;
+}
+
+.todo-button-edit:hover {
   -webkit-transform: scale(1.5);
   transform: scale(1.3);
 }

@@ -22,11 +22,11 @@ body {
 }
 
 .container-todo .todo-header .home-perfil {
-  height: 60px;
-  width: 60px;
+  height: 45px;
+  width: 45px;
 
   border-radius: 50%;
-  border: 4px solid #ffc632;
+  /* border: 4px solid #ffc632; */
 }
 
 .container-todo .todo-nav {
@@ -36,19 +36,26 @@ body {
 
   width: 100%;
   padding: 10px;
+
+  background-color: #fff;
 }
 
 .container-todo .todo-nav .todo-tasks-adicionadas,
 .todo-tasks-concluidas {
   width: 50%;
+  height: auto;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  color: #24221f;
+
+  font-weight: 600;
 }
 
 .container-todo .todo-main {
-  max-width: 500px;
+  max-width: 790px;
   width: 100%;
 
   margin-top: 20px;
@@ -58,13 +65,14 @@ body {
   flex-direction: column;
 }
 
-/*   
-  .container .todo-header img {
+   
+  /* .container .todo-header img {
     width: 60px;
     height: 60px;
     border-radius: 30px;
     margin-left: 7px;
   } */
+
 
 .container-todo .todo-header div {
   display: flex;
@@ -78,6 +86,8 @@ body {
 
   margin-top: 80px;
   margin-bottom: 10px;
+
+  color: #24221f;
 }
 
 @media (max-width: 488px) {
@@ -101,7 +111,15 @@ body {
   font-size: 16px;
 
   box-shadow: 8px 6px 8px #24221f;
+  
+  /* transition: .4s ease-in-out; */
 }
+/* 
+.container-todo .todo-input:hover{
+  border-left: 12px solid #24221f;
+
+  transition: .4s ease-in-out;
+} */
 
 .container-todo .todo-btn {
   width: 100%;
@@ -112,7 +130,7 @@ body {
   font-weight: 700;
 
   background: #ffc632;
-  color: #24221f;
+  color: #201f1e;
 
   border-radius: 5px;
   margin: 30px 0 84px;
